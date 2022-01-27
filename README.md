@@ -28,9 +28,15 @@ We'll build a neural network using PyTorch to discriminate between digits 0 to 9
 
 ---
 ## Dataset
+<<<<<<< HEAD
 - Dataset consists of 60,000 training images and 10,000 training images.
 - Images may belong to any of the ten classes (digits 0 to 9)
 - Each image in the dataset is a 28x28 pixel grayscale image, a zoomed-in single image shown below...
+=======
+- Dataset consists on 60,000 training images and 10,000 testing images.
+- Images may belong to any of the 10 classes (digits 0 to 9)
+- Each image in the dataset is 28x28 pixel gray scale image, a zoomed in single images shown below...
+>>>>>>> 5ce8ed4b6416577ec570c0dfcf479c4786f4bfdf
 
 ![](assets/mnist_single_image.png)
 
