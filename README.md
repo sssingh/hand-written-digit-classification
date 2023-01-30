@@ -18,6 +18,7 @@ In this project we deal with a `multi-label-classification` problem where we cla
 - [How To Use](#how-to-use)
 - [License](#license)
 - [Get in touch](#get-in-touch)
+- [Credits](#credits)
 
 ## Introduction
 The Modified National Institute of Standards and Technology (MIST) dataset was prepared by combining two National Institute of Standards and Technology (NIST) databases. These databases contained the images of hand-written digits by high school students and the United States Census Bureau employees. The MNIST dataset is widely used in academia for training and testing machine-learning models. I tend to think of this as the "Hello World" for classification tasks to experiment with various ML and DL models. The MNIST digit classification is possibly one of an aspiring ML/DL learner's first tasks.MNIST is an excellent dataset for people who wish to try machine learning techniques on a real-world dataset with very little time and effort on data preparation and pre-processing, which is the most time-consuming task in data science projects.   
