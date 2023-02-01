@@ -4,9 +4,9 @@ In this project we deal with a `multi-label-classification` problem where we cla
 <img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_intro.jpeg?raw=true">
 
 ## Features
-⚡Multi Label Image Classification
-⚡Cutsom Fully Connected NN
-⚡MNIST
+⚡Multi Label Image Classification  
+⚡Cutsom Fully Connected NN  
+⚡MNIST  
 ⚡PyTorch
 
 ## Table of Contents
