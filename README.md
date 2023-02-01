@@ -1,7 +1,7 @@
 # MNIST Classification using Neural Network 
 In this project we deal with a `multi-label-classification` problem where we classify hand-written digits images in MNIST dataset using a custom built neural-network
 
-![](assets/mnist_intro.jpeg)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_intro.jpeg">
 
 ## Features
 ⚡Multi Label Image Classification
@@ -35,11 +35,11 @@ We'll build a neural network using PyTorch to discriminate between digits 0 to 9
 - Images may belong to any of the 10 classes (digits 0 to 9)
 - Each image in the dataset is 28x28 pixel gray scale image, a zoomed in single images shown below...
 
-![](assets/mnist_single_image.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_single_image.png">
 
 - Here are a few more samples of other digits images from the training dataset with their respective labels...
 
-![](assets/mnist_samples.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_samples.png">
 
 
 - We will use the in-built MNIST dataset from PyTorch's `torchvision` package. The advantage of using the dataset this way is that we get a clean pre-processed dataset that pairs the image and respective label nicely, making our life easier when we iterate through the image samples while training and testing the model. Alternatively, the raw dataset can be downloaded from the original source [here](http://yann.lecun.com/exdb/mnist/). The raw dataset comes as a set of zip files containing training images, training images, testing images, and testing images in separate files.
@@ -49,9 +49,9 @@ We'll build a neural network using PyTorch to discriminate between digits 0 to 9
 ### Loss Function  
 Negative Log-Likelihood Loss (NLLLoss) is used as the loss function during model training and validation 
 
-![](assets/logsoftmax.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/logsoftmax.png">
 
-![](assets/nllloss.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/nllloss.png">
 
 <br>Note the `negative` sign in front `NLLLoss` formula (and in the `BCELoss` formula as well) hence negative in the name. The negative sign is put in front to make the average loss positive. Suppose we don't do this then since the `log` of a number less than 1 is negative. In that case, we will have a negative overall average loss. To reduce the loss, we need to `maximize` the loss function instead of `minimizing,` which is a much easier task mathematically than `maximizing.`
 
@@ -59,7 +59,7 @@ Negative Log-Likelihood Loss (NLLLoss) is used as the loss function during model
 
 `accuracy` is used as the model's performance metric on the test-set 
 
-![](assets/accuracy.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/accuracy.png">
 
 ## Solution Approach
 - Training dataset of 60,000 images and labels along with testing dataset of 10,000 images and labels are downloaded from torchvision.
@@ -67,18 +67,18 @@ Negative Log-Likelihood Loss (NLLLoss) is used as the loss function during model
 - The training, validation, and testing datasets are then wrapped in PyTorch `DataLoaders` objects so that we can iterate through them with ease. Again, a typical `batch_size` 32 is used.
 - The neural network is implemented as a subclass of the `nn.Module` PyTorch class. The network has an input, two hidden layers (784 and 128 nodes), and an output layer with ten nodes. Hidden layers use `ReLU` activation function. Output layer uses `LogSoftmax` activation. A 25% dropout regularization is used after each of the hidden-layer outputs. Images of size 28x28 are flattened before being fed to the network as a 784 element long vector. A high-level network schematic is shown below...
 
-![](assets/network.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/network.png">
 
 - Network is trained and validated for ten epochs using the `NLLLoss` function and `Adam` optimizer with a learning rate of 0.001.
 - We keep track of training and validation losses. When plotted, we observe that the model starts to `overfit` around the 5th epoch.
 
-![](assets/loss_plot.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/loss_plot.png">
 
 - During the validation, we compare the current validation loss with previous validation loss and save the model of validation loss has `decreased` further; this way, we'll end up with the best model kept and not the model from the last epoch, which could be a model that overfits (as we can see from plot above)
 - The trained model is then evaluated on an unseen test dataset. For this, we first load the saved model and then predict over 10,000 testing images.
 - For each digit label, we keep track of prediction accuracy as correct-prediction/total-number-of-images. As a result, the network can achieve around `97.52%` accuracy. The test result summary is shown below...
 
-![](assets/test_results.png)
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/test_results.png">
 
 ## How To Use
 1. Ensure the below-listed packages are installed
