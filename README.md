@@ -35,11 +35,11 @@ We'll build a neural network using PyTorch to discriminate between digits 0 to 9
 - Images may belong to any of the 10 classes (digits 0 to 9)
 - Each image in the dataset is 28x28 pixel gray scale image, a zoomed in single images shown below...
 
-<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_single_image.png">
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_single_image.png?raw=true">
 
 - Here are a few more samples of other digits images from the training dataset with their respective labels...
 
-<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_samples.png">
+<img src="https://github.com/sssingh/hand-written-digit-classification/blob/master/assets/mnist_samples.png?raw=true">
 
 
 - We will use the in-built MNIST dataset from PyTorch's `torchvision` package. The advantage of using the dataset this way is that we get a clean pre-processed dataset that pairs the image and respective label nicely, making our life easier when we iterate through the image samples while training and testing the model. Alternatively, the raw dataset can be downloaded from the original source [here](http://yann.lecun.com/exdb/mnist/). The raw dataset comes as a set of zip files containing training images, training images, testing images, and testing images in separate files.
